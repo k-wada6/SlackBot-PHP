@@ -4,7 +4,7 @@
 PHP+ライブラリBotManを使ったSlackBot
 
 ## 使用方法<br>
-１．　$ git clone　<span>https</span>://github.com/k-wada6/SlackBot-PHP<br>
+１．　$ git clone <span>https</span>://github.com/k-wada6/SlackBot-PHP<br>
 ２．　tokenid.phpを作成、SlackBotのAPIを記載。<br>
 　　　※my-bot-fileとtokenidのファイルパスは同じにしてください。<br><br>
 例：　　<?php<br>
