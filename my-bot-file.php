@@ -37,14 +37,14 @@ $botman->hears('コマンド', function($bot) {
 
 //　現在時刻の取得
 $botman->hears('現在', function($bot) {
-    $bot->reply(date('Y年m月d日 H時i分s秒'));
+    $bot->reply(date("【現在の日付時刻】\n"."Y年m月d日 \n H時i分s秒"));
 });
 
 //天気の詳細表示
 $botman->hears('天気詳細', function($bot) {
     $url = "http://weather.livedoor.com/forecast/webservice/json/v1?city=130010";
     $json = file_get_contents($url, true);
-    $json = json_decode($json, true);
+    $json = json_decode($json, true); 
  
     // Pubric
     $title = $json['title'];                                                    // 市区町村
@@ -56,7 +56,7 @@ $botman->hears('天気詳細', function($bot) {
     $area = $json['location']['area'];                              // 関東
     $prefecture = $json['location']['prefecture'];      // 東京都
     $link = $json['link'];        
-    $bot->reply($description);
+    $bot->reply("【天気の詳細】\n".$description);
 });
 
 //今日の天気取得
@@ -74,7 +74,7 @@ $botman->hears('天気', function($bot) {
     $telop = $entry['telop'];  
     }                                                                             // 天気
               
-    $bot->reply($telop);
+    $bot->reply("【本日の天気】\n".$telop."です。");
 });
 
 $botman->hears('convo', function($bot) {
