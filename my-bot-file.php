@@ -32,7 +32,7 @@ $botman = BotManFactory::createForRTM([
 
 //　コマンド一覧の取得
 $botman->hears('コマンド', function($bot) {
-    $bot->reply("【コマンド一覧】\n・現在\n・天気\n・天気詳細\n");
+    $bot->reply("【コマンド一覧:beginner:】\n・現在\n・天気\n・天気詳細\n");
 });
 
 //　現在時刻の取得
@@ -56,7 +56,7 @@ $botman->hears('天気詳細', function($bot) {
     $area = $json['location']['area'];                              // 関東
     $prefecture = $json['location']['prefecture'];      // 東京都
     $link = $json['link'];        
-    $bot->reply("【天気の詳細】\n".$description);
+    $bot->reply("【天気の詳細:sunny:】\n".$description);
 });
 
 //今日の天気取得
@@ -74,7 +74,7 @@ $botman->hears('天気', function($bot) {
     $telop = $entry['telop'];  
     }                                                                             // 天気
               
-    $bot->reply("【本日の天気】\n".$telop."です。");
+    $bot->reply("【本日の天気:sunny:】\n".$telop."です。");
 });
 
 $botman->hears('convo', function($bot) {
