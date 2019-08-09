@@ -34,14 +34,17 @@ $ php -v
 ## 使用方法<br> 
 
 ```
-- $ git clone <span>https</span>://github.com/k-wada6/SlackBot-PHP
+$ git clone <span>https</span>://github.com/k-wada6/SlackBot-PHP
 ```
-- tokenid.phpを作成、SlackBotのAPIを記載。<br>
-　　　※my-bot-fileとtokenidのファイルパスは同じにしてください。<br><br>
+```
+tokenid.phpを作成、SlackBotのAPIを記載。<br>
+```
+※my-bot-fileとtokenidのファイルパスは同じにしてください。<br><br>
 例：　　<?php<br>
 　　　　echo 'xxxx-xxxxxxx-xxxxxxxx-xxxxxxxxxxxxxxxx';<br><br>
-- my-bot-file.phpの実行<br>
-
+```
+my-bot-file.phpの実行
+```
 
 ## コマンド一覧<br>
      ●　  天気　　：現在の天気の取得。
