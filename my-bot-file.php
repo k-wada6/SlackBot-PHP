@@ -59,6 +59,8 @@ $botman->hears('天気詳細', function($bot) {
     $bot->reply("【天気の詳細:sunny:】\n".$description);
 });
 
+
+
 //今日の天気取得
 $botman->hears('天気', function($bot) {
     $url = "http://weather.livedoor.com/forecast/webservice/json/v1?city=130010";

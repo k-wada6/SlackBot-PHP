@@ -2,6 +2,7 @@
 
 ## 概要<br>
 PHP+ライブラリBotManを使ったSlackBot
+※PHP7推奨。PHP5だとエラーになるかと思います。
 
 ## 使用方法<br>
 １．　$ git clone <span>https</span>://github.com/k-wada6/SlackBot-PHP<br>
