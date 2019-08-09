@@ -7,7 +7,7 @@ PHP+ライブラリBotManを使ったSlackBot<br>
 ## Linux-PHP7.3インストール方法<br>
 <ol>
 <li>EPELインストール</li>
-```
+```bash
 $ sudo yum install epel-release
 ```
 <li>yumを更新</li>　
