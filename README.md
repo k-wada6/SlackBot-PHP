@@ -1,7 +1,7 @@
 # SlackBot-PHP
 
 ## 概要<br>
-PHP+ライブラリBotManを使ったSlackBot
+PHP+ライブラリBotManを使ったSlackBot<br>
 ※PHP7推奨。PHP5だとエラーになるかと思います。
 
 ## 使用方法<br>
