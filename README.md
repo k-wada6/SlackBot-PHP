@@ -14,18 +14,17 @@ yumを更新　
 ```
 $ sudo yum update
 ```
-Remiインストール　
+Remiインストール
 ```$ sudo yum -y install <span>http</span>://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 ```
-yumを更新　
+yumを更新
 ```$ sudo yum update
 ```
-php7.3インストール　
+php7.3インストール
 ```
 $ sudo yum -y install --enablerepo=remi,remi-php73 php php-devel php-mbstring php-pdo php-gd 　php-xml php-mcrypt
 ```
 PHP7.3がインストールされているか確認
-
 ```$ php -v
 ```
 
