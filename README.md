@@ -25,8 +25,10 @@ php7.3インストール　
 $ sudo yum -y install --enablerepo=remi,remi-php73 php php-devel php-mbstring php-pdo php-gd 　php-xml php-mcrypt
 ```
 PHP7.3がインストールされているか確認
+
 ```$ php -v
 ```
+
 ## 使用方法<br> 
 ```
 １．　$ git clone <span>https</span>://github.com/k-wada6/SlackBot-PHP<br>
