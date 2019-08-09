@@ -37,7 +37,7 @@ $ php -v
 $ git clone <span>https</span>://github.com/k-wada6/SlackBot-PHP
 ```
 ```
-tokenid.phpを作成、SlackBotのAPIを記載。<br>
+tokenid.phpを作成、SlackBotのAPIを記載。
 ```
 ※my-bot-fileとtokenidのファイルパスは同じにしてください。<br><br>
 例：　　<?php<br>
