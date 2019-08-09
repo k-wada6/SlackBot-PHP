@@ -6,13 +6,28 @@ PHP+ライブラリBotManを使ったSlackBot<br>
 
 ## Linux-PHP7.3インストール方法<br>
 <ol>
-```<li>EPELインストール</li>　$ sudo yum install epel-release
-<li>yumを更新</li>　$ sudo yum update
-<li>Remiインストール</li>　$ sudo yum -y install <span>http</span>://rpms.famillecollet.com/enterprise/remi-release-7.rpm
-<li>yumを更新</li>　$ sudo yum update
-<li>php7.3インストール</li>　$ sudo yum -y install --enablerepo=remi,remi-php73 php php-devel php-mbstring php-pdo php-gd 　php-xml php-mcrypt
-<li>PHP7.3がインストールされているか確認</li>　$ php -v
-</ol>```
+<li>EPELインストール</li>
+```
+　$ sudo yum install epel-release
+```
+<li>yumを更新</li>　
+```
+$ sudo yum update
+```
+<li>Remiインストール</li>　
+```$ sudo yum -y install <span>http</span>://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+```
+<li>yumを更新</li>　
+```$ sudo yum update
+```
+<li>php7.3インストール</li>　
+```
+$ sudo yum -y install --enablerepo=remi,remi-php73 php php-devel php-mbstring php-pdo php-gd 　php-xml php-mcrypt
+```
+<li>PHP7.3がインストールされているか確認</li>　
+```$ php -v
+```
+</ol>
 
 ## 使用方法<br> 
 ```
