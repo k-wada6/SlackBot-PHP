@@ -33,8 +33,8 @@ $ php -v
 
 ## 使用方法<br> 
 
-- ```
-$ git clone <span>https</span>://github.com/k-wada6/SlackBot-PHP
+```
+- $ git clone <span>https</span>://github.com/k-wada6/SlackBot-PHP
 ```
 - tokenid.phpを作成、SlackBotのAPIを記載。<br>
 　　　※my-bot-fileとtokenidのファイルパスは同じにしてください。<br><br>
