@@ -15,7 +15,8 @@ yumを更新　
 $ sudo yum update
 ```
 Remiインストール
-```$ sudo yum -y install <span>http</span>://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+```
+$ sudo yum -y install <span>http</span>://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 ```
 yumを更新
 ```
@@ -31,14 +32,16 @@ $ php -v
 ```
 
 ## 使用方法<br> 
+
+- ```
+$ git clone <span>https</span>://github.com/k-wada6/SlackBot-PHP
 ```
-１．　$ git clone <span>https</span>://github.com/k-wada6/SlackBot-PHP<br>
-２．　tokenid.phpを作成、SlackBotのAPIを記載。<br>
+- tokenid.phpを作成、SlackBotのAPIを記載。<br>
 　　　※my-bot-fileとtokenidのファイルパスは同じにしてください。<br><br>
 例：　　<?php<br>
 　　　　echo 'xxxx-xxxxxxx-xxxxxxxx-xxxxxxxxxxxxxxxx';<br><br>
-３.   my-bot-file.phpの実行<br>
-```
+- my-bot-file.phpの実行<br>
+
 
 ## コマンド一覧<br>
      ●　  天気　　：現在の天気の取得。
