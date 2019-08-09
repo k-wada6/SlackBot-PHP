@@ -5,8 +5,8 @@ PHP+ライブラリBotManを使ったSlackBot<br>
 ※PHP7推奨。PHP5だとエラーになるかと思います。
 
 ## Linux-PHP7.3インストール方法<br>
-<ol>
-<li>EPELインストール</li>
+
+EPELインストール
 ```
 $ sudo yum install epel-release
 ```
@@ -27,8 +27,6 @@ $ sudo yum -y install --enablerepo=remi,remi-php73 php php-devel php-mbstring ph
 PHP7.3がインストールされているか確認
 ```$ php -v
 ```
-</ol>
-
 ## 使用方法<br> 
 ```
 １．　$ git clone <span>https</span>://github.com/k-wada6/SlackBot-PHP<br>
