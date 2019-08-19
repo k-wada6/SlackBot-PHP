@@ -7,6 +7,13 @@ use BotMan\BotMan\Drivers\DriverManager;
 use BotMan\Drivers\Slack\SlackRTMDriver;
 
 
+
+
+define( 'DB_HOST', '');
+define( 'DB_USER', '');
+define( 'DB_PASS', '');
+define( 'DB_NAME', '');
+
 // Load driver
 DriverManager::loadDriver(SlackRTMDriver::class);
 
@@ -88,6 +95,27 @@ $botman->hears('天気', function($bot) {
     print "-- 天気取得終了";
  
 });
+
+$botman->hears('メモ帳', function($bot) {
+    $bot->reply('入力');
+    $bot->ask('Whats your name?', function($answer, $bot) {
+        $bot->say('Welcome '.$answer->getText());
+    });
+});
+
+$botman->listen();
+
+
+   
+
+
+
+$botman->hears('Hello', function($bot) {
+    
+    $bot->startConversation(new OnboardingConversation);
+});
+
+
 $botman->hears('convo', function($bot) {
     $bot->startConversation(new ExampleConversation());
 });

@@ -5,6 +5,7 @@ namespace BotMan\BotMan\Cache;
 use Psr\Cache\CacheItemPoolInterface;
 use BotMan\BotMan\Interfaces\CacheInterface;
 
+
 class Psr6Cache implements CacheInterface
 {
     /**
