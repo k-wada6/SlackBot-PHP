@@ -98,16 +98,16 @@ $botman->hears('天気', function($bot) {
 
 $botman->hears('メモ帳', function($bot) {
     $bot->reply('入力');
-    $bot->ask('Whats your name?', function($answer, $bot) {
-        $bot->say('Welcome '.$answer->getText());
+    $bot->ask('してください。', function($answer, $bot) {
+
+        $file = 'people.txt';
+        $person = $answer;
+        file_put_contents($file, $person, FILE_APPEND | LOCK_EX);
+        $bot->say('以下の内容で保存します。 '."\n".$answer->getText());
     });
 });
 
 $botman->listen();
-
-
-   
-
 
 
 $botman->hears('Hello', function($bot) {
