@@ -6,9 +6,6 @@ use BotMan\BotMan\BotManFactory;
 use BotMan\BotMan\Drivers\DriverManager;
 use BotMan\Drivers\Slack\SlackRTMDriver;
 
-
-
-
 define( 'DB_HOST', '');
 define( 'DB_USER', '');
 define( 'DB_PASS', '');
@@ -40,9 +37,7 @@ $botman = BotManFactory::createForRTM([
 //　コマンド一覧の取得
 $botman->hears('コマンド', function($bot) {
     print "-- コマンド表示開始";
-
     $bot->reply("【コマンド一覧:beginner:】\n・現在\n・天気\n・天気詳細\n");
-
     print "-- コマンド表示終了";
 });
 
@@ -104,17 +99,21 @@ $botman->hears('メモ帳', function($bot) {
         $person = $answer;
         file_put_contents($file, $person, FILE_APPEND | LOCK_EX);
         $bot->say('以下の内容で保存します。 '."\n".$answer->getText());
+        fclose($file);
     });
+});
+$botman->listen();
+//
+$botman->hears('メモ内容', function($bot) {        
+        $contents = file_get_contents("people.txt");       
+        $bot->reply($contents);   
 });
 
 $botman->listen();
-
-
 $botman->hears('Hello', function($bot) {
     
     $bot->startConversation(new OnboardingConversation);
 });
-
 
 $botman->hears('convo', function($bot) {
     $bot->startConversation(new ExampleConversation());
