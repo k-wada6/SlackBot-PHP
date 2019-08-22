@@ -95,13 +95,37 @@ $botman->hears('メモ帳', function($bot) {
     $bot->reply('入力');
     $bot->ask('してください。', function($answer, $bot) {
 
-        $file = 'people.txt';
-        $person = $answer;
-        file_put_contents($file, $person, FILE_APPEND | LOCK_EX);
+// 変数の初期化 & 日時の取得
+date_default_timezone_set('Asia/Tokyo');
+$sql = null;
+$res = null;
+$dbh = null;
+$date = date('Y-m-d H:i:s');
+
+try {
+	// DBへ接続
+	$dbh = new PDO("mysql:host=host; dbname=; charset=utf8", 'name', 'pass');
+
+	// SQL作成
+	$sql = "INSERT INTO new_table (memo) VALUES ('$answer')";
+
+	// SQL実行
+	$res = $dbh->query($sql);
+
+} catch(PDOException $e) {
+	echo $e->getMessage();
+	die();
+}
+// 接続を閉じる
+
+        // $file = 'people.txt';
+        //$person = $answer;
+        //file_put_contents($file, $person, FILE_APPEND | LOCK_EX);
         $bot->say('以下の内容で保存します。 '."\n".$answer->getText());
-        fclose($file);
+        //fclose($file);
     });
 });
+
 $botman->listen();
 //
 $botman->hears('メモ内容', function($bot) {        
