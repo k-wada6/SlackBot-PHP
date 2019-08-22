@@ -1,9 +1,9 @@
 <?php
 $connect = true;
 $host = 'localhost';
-$db_name = 'slackphp';
-$user = 'k.wada';
-$password = 'K.wada123';
+$db_name = '';
+$user = '';
+$password = '';
 $message = '';
 try {
   $dbh = new PDO("mysql:host=$host;dbname=$db_name;charset=utf8", $user, $password);
